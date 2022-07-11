@@ -28,10 +28,10 @@ var generatePassword = function () {
 
     if (passLength < 8) {
         window.alert("Password length must be at least 8 characters.");
-        return "Try again";
+        return "Try Again";
     } else if (passLength > 128) {
         window.alert("Password length must be less than 129 characters.");
-        return "Try again";
+        return "Try Again";
     }
 
     var acceptableChars = "";
