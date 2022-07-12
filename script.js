@@ -23,14 +23,11 @@ generateBtn.addEventListener("click", writePassword);
 
 // This section contains prompts to ask and answer questions about what to include in the password 
 var generatePassword = function () {
-    var passLength = parseInt(window.prompt("How many characters would you like your password to contain?"));
-    // console.log(passLength);
+    var passLength = (window.prompt("How many characters would you like your password to contain?  Enter a number between 8-128"));
+    console.log(passLength);
 
-    if (passLength < 8) {
-        window.alert("Password length must be at least 8 characters.");
-        return "Try Again";
-    } else if (passLength > 128) {
-        window.alert("Password length must be less than 129 characters.");
+    if (!(passLength >= 8 && passLength <= 128)) {
+        window.alert("Enter a number between 8-128.")
         return "Try Again";
     }
 
@@ -51,11 +48,11 @@ var generatePassword = function () {
     if (passUpChars) {
         acceptableChars += uppercase
     };
-    // console.log(acceptableChars);
+    console.log(acceptableChars);
 
     var passwd = "";
     for (i = 0; i < passLength; i++) {
-        // console.log(passwd);
+        console.log(passwd);
         passwd += acceptableChars.charAt(Math.floor(Math.random() * acceptableChars.length));
     };
 
