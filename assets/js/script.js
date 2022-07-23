@@ -32,6 +32,7 @@ var generatePassword = function () {
     }
 
     var acceptableChars = "";
+    
     var passSpecChars = window.confirm("Click Ok to confirm to include special characters.");
     if (passSpecChars) {
         acceptableChars += specialCharacters
